@@ -1,0 +1,76 @@
+/*****************************
+Diego Villa García - UO277188
+Descripción de los estilos
+******************************/
+
+/* Especificidad 001 */
+body {
+    background-color: rgb(221, 188, 145);
+    color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Especificidad 001 */
+main {
+    background-color: rgb(38, 38, 94);
+    color: white;
+    padding: 0.8em;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1em;
+    border: 0.2em solid black;
+}
+
+/* Especificidad 001 */
+input {
+    border: 0.1em solid #111;
+    padding: 0.5em;
+    border-radius: 5px;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+/* Especificidad 011 */
+input:active {
+    border: 0.1em solid red;
+}
+
+/* Especificidad 011 */
+input[type="button"] {
+    background-color: rgb(255, 70, 70);
+}
+
+/* Especificidades 021 */
+input[type="button"][value="0"],
+input[type="button"][value="1"],
+input[type="button"][value="2"],
+input[type="button"][value="3"],
+input[type="button"][value="4"],
+input[type="button"][value="5"],
+input[type="button"][value="6"],
+input[type="button"][value="7"],
+input[type="button"][value="8"],
+input[type="button"][value="9"],
+input[type="button"][value="0"],
+input[type="button"][value="."],
+input[type="button"][value="="] {
+    background-color: rgb(255, 255, 255);
+}
+
+/* Especificidad 021 */
+input[type="button"][value="+"] {
+    grid-row: span 2
+}
+
+/* Especificidad 011 */
+input[type="text"] {
+    grid-column: span 5;
+    background-color: rgb(203, 255, 202);
+    border: 0.1em solid rgb(0, 0, 0);
+    color: rgb(0, 0, 0);
+    text-align: right;
+    font-size: 2em;
+    cursor: default;
+}
