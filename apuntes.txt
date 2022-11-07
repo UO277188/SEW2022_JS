@@ -1,0 +1,10 @@
+CALCULADORA
+centrarla con flex columna de body
+utilizar grid por columnas, primera fila ocupa todas las columnas
+pantalla es input texto read only
+boton es input button onclick value title, mismo color para todos
+si quiero colores distintos despues pongo css para value(borrar)...
+number para todo
+onclick llama a pulsardigito(numero)
+math para cientificas
+al comprobar pulsacion tecla en cientifica mirar cual es, si no encuentra llamar a metodo en superclase

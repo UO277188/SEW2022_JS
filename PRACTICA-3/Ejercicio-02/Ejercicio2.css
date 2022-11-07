@@ -1,0 +1,21 @@
+/*****************************
+Diego Villa García - UO277188
+Descripción de los estilos
+******************************/
+
+/* Especificidad 001 */
+body {
+    color: black;
+    background-color: white;
+    font-family: Helvetica, Verdana, sans-serif;
+}
+
+/* Especificidad 001 para todos */
+h1, h2 {
+    background-color: rgb(255, 204, 133);
+}
+
+/* Especificidad 001 */
+p {
+    font-size: 1.1em;
+}
