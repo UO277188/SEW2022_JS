@@ -5,4 +5,4 @@ infoNavegador.version = navigator.appVersion;
 infoNavegador.plataforma = navigator.platform;
 infoNavegador.vendedor = navigator.vendor;
 infoNavegador.agente = navigator.userAgent;
-infoNavegador.javaActivo = navigator.javaEnabled();
+infoNavegador.javaActivo = navigator.javaEnabled();Idioma
