@@ -10,8 +10,10 @@ body {
     font-family: Helvetica, Verdana, sans-serif;
 }
 
-/* Especificidad 001 para todos */
-h1, h2 {
+/* Especificidad 001 para todos 
+    Heredan la propiedad color de body */
+h1,
+h2 {
     background-color: rgb(255, 204, 133);
 }
 
