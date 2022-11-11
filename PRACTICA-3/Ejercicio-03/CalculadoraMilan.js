@@ -2,7 +2,7 @@ class Calculadora {
     constructor() {
         this.operacion = "";
         this.pantalla = "";
-        this.memoria = "";
+        this.memoria = 0;
 
         document.addEventListener('keydown', (event) => {
             var digitos = new RegExp('^[0-9]+$');
@@ -87,14 +87,13 @@ class Calculadora {
     }
 
     mrc() {
-        document.getElementsByTagName("input")[0].value = this.memoria;
-        this.pantalla = this.memoria;
+        this.pantalla += this.memoria;
         document.getElementsByTagName("input")[0].value = this.pantalla;
     }
 
     mMenos() {
         var valorPantalla = document.getElementsByTagName("input")[0].value;
-        this.memoria -= valorPantalla;
+        this.memoria -= Number(valorPantalla);
         document.getElementsByTagName("input")[0].value = this.memoria;
     }
 
@@ -104,7 +103,13 @@ class Calculadora {
         document.getElementsByTagName("input")[0].value = this.memoria;
     }
 
-    borrar() {
+    c() {
+        this.pantalla = "";
+        this.operacion = "";
+        document.getElementsByTagName("input")[0].value = this.pantalla;
+    }
+
+    ce() {
         this.pantalla = "";
         this.operacion = "";
         document.getElementsByTagName("input")[0].value = this.pantalla;
@@ -119,6 +124,7 @@ class Calculadora {
             try {
                 document.getElementsByTagName("input")[0].value = eval(this.operacion);
                 this.pantalla = eval(this.operacion) + "";
+                this.operacion = eval(this.operacion);
             } catch (error) {
                 document.getElementsByTagName("input")[0].value = "ERROR";
                 this.pantalla = "";
@@ -130,18 +136,17 @@ class Calculadora {
     porcentaje() {
         this.compruebaOperador();
         this.pantalla += "%";
-        this.operacion += "/100"
+        this.operacion += "/100";
         document.getElementsByTagName("input")[0].value = this.pantalla;
     }
 
     raiz() {
         this.compruebaOperador();
-        this.pantalla += "√";
-
         let numbers = this.pantalla.split(/\D/);
-        let lastNumber = numbers[numbers.length - 2]
-        let numberSize = numbers[numbers.length - 2].length
+        let lastNumber = numbers[numbers.length - 1];
+        let numberSize = numbers[numbers.length - 1].length;
 
+        this.pantalla += "√";
         this.operacion = this.operacion.slice(0, this.operacion.length - numberSize);
         this.operacion += Math.sqrt(Number(lastNumber));
         document.getElementsByTagName("input")[0].value = this.pantalla;
@@ -165,8 +170,7 @@ class Calculadora {
 
     hayOperador() {
         return (this.pantalla.endsWith("+") || this.pantalla.endsWith("-") || this.pantalla.endsWith("*")
-            || this.pantalla.endsWith("/") || this.pantalla.endsWith(".") || this.pantalla.endsWith("√")
-            || this.pantalla.endsWith("%"))
+            || this.pantalla.endsWith("/") || this.pantalla.endsWith("."))
     }
 }
 
