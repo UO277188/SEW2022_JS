@@ -67,13 +67,16 @@ input[type="button"][value="+"] {
     grid-row: span 2
 }
 
+/* Especificidad 001 */
+label {
+    grid-column: span 5;
+    font-size: 2em;
+}
+
 /* Especificidad 011 */
 input[type="text"] {
-    grid-column: span 5;
-    background-color: rgb(203, 255, 202);
-    border: 0.1em solid rgb(0, 0, 0);
-    color: rgb(0, 0, 0);
     text-align: right;
-    font-size: 2em;
+    background-color: rgb(203, 255, 202);
+    color: rgb(0, 0, 0);
     cursor: default;
 }
