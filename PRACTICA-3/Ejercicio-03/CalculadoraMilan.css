@@ -38,12 +38,14 @@ input:active {
     border: 0.1em solid red;
 }
 
-/* Especificidad 011 */
+/* Especificidad 011 
+    Todos los botones heredan la propiedad color de body */
 input[type="button"] {
     background-color: rgb(255, 70, 70);
 }
 
-/* Especificidades 021 */
+/* Especificidades 021 
+    Todos los botones heredan la propiedad color de body */
 input[type="button"][value="0"],
 input[type="button"][value="1"],
 input[type="button"][value="2"],
