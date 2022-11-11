@@ -103,13 +103,7 @@ class Calculadora {
         document.getElementsByTagName("input")[0].value = this.memoria;
     }
 
-    c() {
-        this.pantalla = "";
-        this.operacion = "";
-        document.getElementsByTagName("input")[0].value = this.pantalla;
-    }
-
-    ce() {
+    borrar() {
         this.pantalla = "";
         this.operacion = "";
         document.getElementsByTagName("input")[0].value = this.pantalla;
