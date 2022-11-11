@@ -1,5 +1,6 @@
 class Calculadora {
     constructor() {
+        this.operacion = "";
         this.pantalla = "";
         this.memoria = "";
 
@@ -24,58 +25,71 @@ class Calculadora {
             else if (event.key == "b")
                 this.mMenos();
             // tecla enter
-            else if (event.key === 'Enter')
+            else if (event.key == 'Enter')
                 this.igual();
             // tecla retroceso
-            else if (event.key === 'Backspace')
+            else if (event.key == 'Backspace')
                 this.borrar();
+            else if (event.key == "p")
+                this.porcentaje();
+            else if (event.key == "r")
+                this.raiz();
+            else if (event.key == "s")
+                this.masMenos();
 
-            document.getElementsByTagName("input")[0].value = this.pantalla;
         })
     }
 
     digitos(numero) {
         this.pantalla += Number(numero);
+        this.operacion += Number(numero);
+        document.getElementsByTagName("input")[0].value = this.pantalla;
     }
 
     punto() {
-        if (!(this.pantalla.endsWith(".") || this.hayOperador()))
+        if (!(this.pantalla.endsWith(".") || this.hayOperador())) {
             this.pantalla += ".";
+            this.operacion += ".";
+        }
+        document.getElementsByTagName("input")[0].value = this.pantalla;
     }
 
     suma() {
-        if (this.hayOperador())
-            this.pantalla = this.pantalla.slice(0, -1);
+        this.compruebaOperador();
 
-        if (this.pantalla == "")
-            this.pantalla += Number(0);
         this.pantalla += "+";
+        this.operacion += "+";
+        document.getElementsByTagName("input")[0].value = this.pantalla;
     }
 
     resta() {
-        if (this.hayOperador())
-            this.pantalla = this.pantalla.slice(0, -1);
+        this.compruebaOperador();
 
         this.pantalla += "-";
+        this.operacion += "-";
+        document.getElementsByTagName("input")[0].value = this.pantalla;
     }
 
     multiplicacion() {
-        if (this.hayOperador())
-            this.pantalla = this.pantalla.slice(0, -1);
+        this.compruebaOperador();
 
         this.pantalla += "*";
+        this.operacion += "*";
+        document.getElementsByTagName("input")[0].value = this.pantalla;
     }
 
     division() {
-        if (this.hayOperador())
-            this.pantalla = this.pantalla.slice(0, -1);
+        this.compruebaOperador();
 
         this.pantalla += "/";
+        this.operacion += "/";
+        document.getElementsByTagName("input")[0].value = this.pantalla;
     }
 
     mrc() {
         document.getElementsByTagName("input")[0].value = this.memoria;
         this.pantalla = this.memoria;
+        document.getElementsByTagName("input")[0].value = this.pantalla;
     }
 
     mMenos() {
@@ -92,6 +106,7 @@ class Calculadora {
 
     borrar() {
         this.pantalla = "";
+        this.operacion = "";
         document.getElementsByTagName("input")[0].value = this.pantalla;
     }
 
@@ -99,32 +114,59 @@ class Calculadora {
         if (this.hayOperador()) {
             document.getElementsByTagName("input")[0].value = "SYNTAX ERROR";
             this.pantalla = "";
+            this.operacion = "";
         } else {
             try {
-                document.getElementsByTagName("input")[0].value = eval(this.pantalla);
-                this.pantalla = eval(this.pantalla) + "";
+                document.getElementsByTagName("input")[0].value = eval(this.operacion);
+                this.pantalla = eval(this.operacion) + "";
             } catch (error) {
                 document.getElementsByTagName("input")[0].value = "ERROR";
                 this.pantalla = "";
+                this.operacion = "";
             }
         }
     }
 
     porcentaje() {
-
+        this.compruebaOperador();
+        this.pantalla += "%";
+        this.operacion += "/100"
+        document.getElementsByTagName("input")[0].value = this.pantalla;
     }
 
     raiz() {
+        this.compruebaOperador();
+        this.pantalla += "√";
 
+        let numbers = this.pantalla.split(/\D/);
+        let lastNumber = numbers[numbers.length - 2]
+        let numberSize = numbers[numbers.length - 2].length
+
+        this.operacion = this.operacion.slice(0, this.operacion.length - numberSize);
+        this.operacion += Math.sqrt(Number(lastNumber));
+        document.getElementsByTagName("input")[0].value = this.pantalla;
     }
 
     masMenos() {
 
     }
 
+    compruebaOperador() {
+        if (this.hayOperador()) {
+            this.pantalla = this.pantalla.slice(0, -1);
+            this.operacion += this.operacion.slice(0, -1);
+        }
+
+        if (this.pantalla == "") {
+            this.pantalla += Number(0);
+            this.operacion += Number(0);
+        }
+    }
+
     hayOperador() {
         return (this.pantalla.endsWith("+") || this.pantalla.endsWith("-") || this.pantalla.endsWith("*")
-            || this.pantalla.endsWith("/") || this.pantalla.endsWith("."))
+            || this.pantalla.endsWith("/") || this.pantalla.endsWith(".") || this.pantalla.endsWith("√")
+            || this.pantalla.endsWith("%"))
     }
 }
 
