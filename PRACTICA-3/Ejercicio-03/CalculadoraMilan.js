@@ -88,19 +88,16 @@ class Calculadora {
 
     mrc() {
         this.pantalla += this.memoria;
+        this.operacion += this.memoria;
         document.getElementsByTagName("input")[0].value = this.pantalla;
     }
 
     mMenos() {
-        var valorPantalla = document.getElementsByTagName("input")[0].value;
-        this.memoria -= Number(valorPantalla);
-        document.getElementsByTagName("input")[0].value = this.memoria;
+        this.memoria -= Number(eval(this.operacion));
     }
 
     mMas() {
-        var valorPantalla = document.getElementsByTagName("input")[0].value;
-        this.memoria += Number(valorPantalla);
-        document.getElementsByTagName("input")[0].value = this.memoria;
+        this.memoria += Number(eval(this.operacion));
     }
 
     borrar() {
