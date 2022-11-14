@@ -1,4 +1,4 @@
-CALCULADORA
+CALCULADORA BASICA
 centrarla con flex columna de body
 utilizar grid por columnas, primera fila ocupa todas las columnas
 pantalla es input texto read only
@@ -8,3 +8,22 @@ number para todo
 onclick llama a pulsardigito(numero)
 math para cientificas
 al comprobar pulsacion tecla en cientifica mirar cual es, si no encuentra llamar a metodo en superclase
+
+5+3x2           -> (5+3)x2
+operando 1 = 5      operando 1 = 8
+operando 2 = 3      operando 2 = 2
+
+-------------------------------------------------------------------------------------
+
+CIENTIFICA
+tecla flecha convierte trigonometricas en inversas (asen, acos, atan)
+
+-------------------------------------------------------------------------------------
+
+RPN
+pantalla es textarea de tamaño fijo con scroll
+primera desapilada es operando 2, no 1, 1 es el segundo desapilado
+
+RPN ESPECIALIZADA
+añadir txt con explicacion de los metodos nuevos
+4 o 5 funciones

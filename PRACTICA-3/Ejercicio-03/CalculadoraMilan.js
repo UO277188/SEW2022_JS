@@ -164,7 +164,7 @@ class CalculadoraMilan {
     compruebaOperador() {
         if (this.hayOperador()) {
             this.pantalla = this.pantalla.slice(0, -1);
-            this.operacion += this.operacion.slice(0, -1);
+            this.operacion = this.operacion.slice(0, -1);
         }
 
         if (this.pantalla == "") {

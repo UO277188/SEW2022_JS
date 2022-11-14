@@ -1,13 +1,12 @@
 /* Especificidad 000 */
 * {
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(221, 188, 145);
     color: rgb(0, 0, 0);
     box-sizing: border-box;
 }
 
 /* Especificidad 001 */
 body {
-    background-color: rgb(221, 188, 145);
     color: rgb(0, 0, 0);
     display: flex;
     justify-content: center;
@@ -74,7 +73,13 @@ label {
 
 /* Especificidad 011 */
 input[type="text"] {
+    background-color: rgb(255, 255, 255);
     text-align: right;
     color: rgb(0, 0, 0);
     cursor: default;
+}
+
+input[type="button"][value="F-E"]{
+    grid-column: span 3;
+    width: 31.2%;
 }

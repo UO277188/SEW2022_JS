@@ -1,10 +1,11 @@
 class CalculadoraCientifica extends CalculadoraMilan {
-    exponencial = false;
-    hiperbolicas = false;
-    grados = true;
-
     constructor() {
         super();
+
+        this.hiperbolicas = false;
+        this.inversas = false;
+        this.grados = true;
+
         document.addEventListener('keydown', (event) => {
             var digitos = new RegExp('^[0-9]+$');
             if (digitos.test(event.key)) {
@@ -50,13 +51,14 @@ class CalculadoraCientifica extends CalculadoraMilan {
             } else if (event.key == "\)") {
                 this.parentesisCerrar();
 
-                // primera fila
             } else if (event.key == "d") {
                 this.deg();
             } else if (event.key == "h") {
                 this.hyp();
             } else if (event.key == "F") {
                 this.fe();
+            }else if (event.key == "i"){
+                this.inversas();
 
                 // memoria
             } else if (event.key == "m") {
@@ -71,13 +73,13 @@ class CalculadoraCientifica extends CalculadoraMilan {
                 this.mMenos();
 
                 // tecla enter
-            } else if (event.keyCode == 13) {
+            } else if (event.key == 'Enter') {
                 this.igual();
                 // tecla retroceso
-            } else if (event.keyCode == 8) {
+            } else if (event.key == 'Backspace') {
                 this.retroceso();
                 // tecla suprimir
-            } else if (event.keyCode == 46) {
+            } else if (event.key == 'C') {
                 this.borrar();
             }
         })
@@ -96,42 +98,41 @@ class CalculadoraCientifica extends CalculadoraMilan {
     }
 
     hyp() {
+        if(this.inversas)
+            return;
+
+        var boton;
+
         if (this.hiperbolicas) {
             this.hiperbolicas = false;
-            var botonSin = document.querySelector("[value=sinh]");
-            botonSin.setAttribute("value", "sin");
+            boton = document.querySelector("[value=sinh]");
+            boton.setAttribute("value", "sin");
 
-            var botonCos = document.querySelector("[value=cosh]");
-            botonCos.setAttribute("value", "cos");
+            boton = document.querySelector("[value=cosh]");
+            boton.setAttribute("value", "cos");
 
-            var botonTan = document.querySelector("[value=tanh]");
-            botonTan.setAttribute("value", "tan");
+            boton = document.querySelector("[value=tanh]");
+            boton.setAttribute("value", "tan");
 
         } else {
             this.hiperbolicas = true;
-            var botonSin = document.querySelector("[value=sin]");
-            botonSin.setAttribute("value", "sinh");
+            boton = document.querySelector("[value=sin]");
+            boton.setAttribute("value", "sinh");
 
-            var botonCos = document.querySelector("[value=cos]");
-            botonCos.setAttribute("value", "cosh");
+            boton = document.querySelector("[value=cos]");
+            boton.setAttribute("value", "cosh");
 
-            var botonTan = document.querySelector("[value=tan]");
-            botonTan.setAttribute("value", "tanh");
+            boton = document.querySelector("[value=tan]");
+            boton.setAttribute("value", "tanh");
         }
     }
 
     fe() {
-        if (this.exponencial) {
-            var result = Number(this.operacion);
-            document.getElementsByTagName("input")[0].value = result;
-            this.operacion = result + "";
-            this.exponencial = false;
-        } else {
-            var result = Number(this.operacion).toExponential();
-            document.getElementsByTagName("input")[0].value = result;
-            this.operacion = result + "";
-            this.exponencial = true;
-        }
+        var result = Number(this.operacion).toExponential();
+        document.getElementsByTagName("input")[0].value = result;
+        this.pantalla = result + "";
+        this.operacion = result + "";
+        this.exponencial = true;
     }
 
     mc() {
@@ -143,9 +144,10 @@ class CalculadoraCientifica extends CalculadoraMilan {
     }
 
     cuadrado() {
-        var result = eval(this.operacion * this.operacion);
+        var result = eval(eval(this.operacion) * eval(this.operacion));
         document.getElementsByTagName("input")[0].value = result;
         this.operacion = result + "";
+        this.pantalla = result + "";
     }
 
     elevar() {
@@ -153,76 +155,102 @@ class CalculadoraCientifica extends CalculadoraMilan {
             this.operacion = this.operacion.slice(0, -1);
         }
         this.operacion += "**";
+        this.pantalla += "^";
+        document.getElementsByTagName("input")[0].value = this.pantalla;
     }
 
     sin() {
         if (this.grados)
-            var numero = Number(this.operacion) * Math.PI / 180;
+            var numero = Number(eval(this.operacion)) * Math.PI / 180;
         else
-            var numero = Number(this.operacion);
+            var numero = Number(eval(this.operacion));
 
         if (this.hiperbolicas) {
-            var result = Math.round(Math.sinh(numero));
+            var result = (Math.sinh(numero)).toFixed(4);
             document.getElementsByTagName("input")[0].value = result;
             this.operacion = result + "";
+            this.pantalla = result + "";
 
-        } else {
-            var result = Math.round(Math.sin(numero));
+        } else if(this.inversas){
+            var result = (Math.asin(numero)).toFixed(4);
             document.getElementsByTagName("input")[0].value = result;
             this.operacion = result + "";
+            this.pantalla = result + "";
+            
+        }else {
+            var result = (Math.sin(numero)).toFixed(4);
+            document.getElementsByTagName("input")[0].value = result;
+            this.operacion = result + "";
+            this.pantalla = result + "";
         }
     }
 
     cos() {
         if (this.grados)
-            var numero = Number(this.operacion) * Math.PI / 180;
+            var numero = Number(eval(this.operacion)) * Math.PI / 180;
         else
-            var numero = Number(this.operacion);
+            var numero = Number(eval(this.operacion));
 
         if (this.hiperbolicas) {
-            var result = Math.round(Math.cosh(numero));
+            var result = (Math.cosh(numero)).toFixed(4);
             document.getElementsByTagName("input")[0].value = result;
             this.operacion = result + "";
-
-        } else {
-            var result = Math.round(Math.cos(numero));
+            this.pantalla = result + "";
+            
+        } else if(this.inversas){
+            var result = (Math.acos(numero)).toFixed(4);
             document.getElementsByTagName("input")[0].value = result;
             this.operacion = result + "";
+            this.pantalla = result + "";
+            
+        }else {
+            var result = (Math.cos(numero)).toFixed(4);
+            document.getElementsByTagName("input")[0].value = result;
+            this.operacion = result + "";
+            this.pantalla = result + "";
         }
     }
 
     tan() {
         if (this.grados)
-            var numero = Number(this.operacion) * Math.PI / 180;
+            var numero = Number(eval(this.operacion)) * Math.PI / 180;
         else
-            var numero = Number(this.operacion);
+            var numero = Number(eval(this.operacion));
 
         if (this.hiperbolicas) {
-            var result = Math.round(Math.tanh(numero));
+            var result = (Math.tanh(numero)).toFixed(4);
             document.getElementsByTagName("input")[0].value = result;
             this.operacion = result + "";
+            this.pantalla = result + "";
+
+        } else if(this.inversas){
+            var result = (Math.acos(numero)).toFixed(4);
+            document.getElementsByTagName("input")[0].value = result;
+            this.operacion = result + "";
+            this.pantalla = result + "";
 
         } else {
-            var result = Math.round(Math.tan(numero));
+            var result = (Math.tan(numero)).toFixed(4);
             document.getElementsByTagName("input")[0].value = result;
             this.operacion = result + "";
+            this.pantalla = result + "";
         }
     }
 
     raiz() {
-        var result = Math.sqrt(this.operacion);
+        var result = Math.sqrt(eval(this.operacion)).toFixed(4);
         document.getElementsByTagName("input")[0].value = result;
         this.operacion = result + "";
     }
 
     diezElevadoA() {
-        var result = Math.pow(10, this.operacion);
+        var result = Math.pow(10, eval(this.operacion));
         document.getElementsByTagName("input")[0].value = result;
         this.operacion = result + "";
     }
 
     log() {
-        var result = Math.log(this.operacion);
+        var result = Math.log(eval(this.operacion));
         document.getElementsByTagName("input")[0].value = result;
         this.operacion = result + "";
     }
@@ -240,10 +268,41 @@ class CalculadoraCientifica extends CalculadoraMilan {
         this.operacion += "%";
     }
 
+    inv(){
+        if(this.hiperbolicas)
+            return;
+
+        var boton;
+
+        if (this.inversas) {
+            this.inversas = false;
+            boton = document.querySelector("[value=asin]");
+            boton.setAttribute("value", "sin");
+
+            boton = document.querySelector("[value=acos]");
+            boton.setAttribute("value", "cos");
+
+            boton = document.querySelector("[value=atan]");
+            boton.setAttribute("value", "tan");
+
+        } else {
+            this.inversas = true;
+            boton = document.querySelector("[value=sin]");
+            boton.setAttribute("value", "asin");
+
+            boton = document.querySelector("[value=cos]");
+            boton.setAttribute("value", "acos");
+
+            boton = document.querySelector("[value=tan]");
+            boton.setAttribute("value", "atan");
+        }
+    }
+
     retroceso() {
         if (this.operacion != "") {
             this.operacion = this.operacion.slice(0, -1);
             document.getElementsByTagName("input")[0].value = this.operacion;
+            this.pantalla = this.operacion;
         }
     }
 
@@ -265,17 +324,20 @@ class CalculadoraCientifica extends CalculadoraMilan {
     masMenos() {
         var result = eval(-eval(this.operacion));
         document.getElementsByTagName("input")[0].value = result;
-        this.operacion = result + "";
+        this.operacion = result+"";
+        this.pantalla = result+"";
     }
 
     parentesisAbrir() {
         this.operacion += "(";
+        this.pantalla += "(";
         document.getElementsByTagName("input")[0].value = this.operacion;
     }
 
     parentesisCerrar() {
         document.getElementsByTagName("input")[0].value += ")";
         this.operacion += ")";
+        this.pantalla += ")";
     }
 }
 
