@@ -266,6 +266,8 @@ class CalculadoraCientifica extends CalculadoraMilan {
             this.operacion = this.operacion.slice(0, -1);
         }
         this.operacion += "%";
+        this.pantalla += "%";
+        document.getElementsByTagName("input")[0].value = this.pantalla;
     }
 
     inv(){
@@ -311,7 +313,7 @@ class CalculadoraCientifica extends CalculadoraMilan {
     }
 
     factorial() {
-        var result = this.factorialRecursivo(this.operacion);
+        var result = this.factorialRecursivo(eval(this.operacion));
         document.getElementsByTagName("input")[0].value = result;
         this.operacion = result + "";
         this.pantalla = eval(this.operacion) + "";
