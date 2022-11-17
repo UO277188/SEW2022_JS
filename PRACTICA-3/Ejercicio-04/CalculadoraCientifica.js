@@ -57,7 +57,7 @@ class CalculadoraCientifica extends CalculadoraMilan {
                 this.hyp();
             } else if (event.key == "F") {
                 this.fe();
-            }else if (event.key == "i"){
+            } else if (event.key == "i") {
                 this.inversas();
 
                 // memoria
@@ -98,7 +98,7 @@ class CalculadoraCientifica extends CalculadoraMilan {
     }
 
     hyp() {
-        if(this.inversas)
+        if (this.inversas)
             return;
 
         var boton;
@@ -171,13 +171,13 @@ class CalculadoraCientifica extends CalculadoraMilan {
             this.operacion = result + "";
             this.pantalla = result + "";
 
-        } else if(this.inversas){
+        } else if (this.inversas) {
             var result = (Math.asin(numero)).toFixed(4);
             document.getElementsByTagName("input")[0].value = result;
             this.operacion = result + "";
             this.pantalla = result + "";
-            
-        }else {
+
+        } else {
             var result = (Math.sin(numero)).toFixed(4);
             document.getElementsByTagName("input")[0].value = result;
             this.operacion = result + "";
@@ -196,14 +196,14 @@ class CalculadoraCientifica extends CalculadoraMilan {
             document.getElementsByTagName("input")[0].value = result;
             this.operacion = result + "";
             this.pantalla = result + "";
-            
-        } else if(this.inversas){
+
+        } else if (this.inversas) {
             var result = (Math.acos(numero)).toFixed(4);
             document.getElementsByTagName("input")[0].value = result;
             this.operacion = result + "";
             this.pantalla = result + "";
-            
-        }else {
+
+        } else {
             var result = (Math.cos(numero)).toFixed(4);
             document.getElementsByTagName("input")[0].value = result;
             this.operacion = result + "";
@@ -223,7 +223,7 @@ class CalculadoraCientifica extends CalculadoraMilan {
             this.operacion = result + "";
             this.pantalla = result + "";
 
-        } else if(this.inversas){
+        } else if (this.inversas) {
             var result = (Math.acos(numero)).toFixed(4);
             document.getElementsByTagName("input")[0].value = result;
             this.operacion = result + "";
@@ -241,37 +241,40 @@ class CalculadoraCientifica extends CalculadoraMilan {
         var result = Math.sqrt(eval(this.operacion)).toFixed(4);
         document.getElementsByTagName("input")[0].value = result;
         this.operacion = result + "";
+        this.pantalla = result + "";
     }
 
     diezElevadoA() {
-        var result = Math.pow(10, eval(this.operacion));
+        var result = Math.pow(10, eval(this.operacion)).toFixed(4);
         document.getElementsByTagName("input")[0].value = result;
         this.operacion = result + "";
+        this.pantalla = result + "";
     }
 
     log() {
-        var result = Math.log(eval(this.operacion));
+        var result = Math.log(eval(this.operacion)).toFixed(4);
         document.getElementsByTagName("input")[0].value = result;
         this.operacion = result + "";
+        this.pantalla = result + "";
     }
 
     exp() {
-        var result = Math.exp(Number(this.operacion));
+        var result = Math.exp(Number(this.operacion)).toFixed(4);
         document.getElementsByTagName("input")[0].value = result;
         this.operacion = result + "";
+        this.pantalla = result + "";
     }
 
     modulo() {
-        if (super.hayOperador()) {
-            this.operacion = this.operacion.slice(0, -1);
-        }
+        this.compruebaOperador();
+
         this.operacion += "%";
         this.pantalla += "%";
         document.getElementsByTagName("input")[0].value = this.pantalla;
     }
 
-    inv(){
-        if(this.hiperbolicas)
+    inv() {
+        if (this.hiperbolicas)
             return;
 
         var boton;
@@ -309,7 +312,7 @@ class CalculadoraCientifica extends CalculadoraMilan {
     }
 
     pi() {
-        super.digitos(Math.PI);
+        super.digitos(Math.PI.toFixed(4));
     }
 
     factorial() {
@@ -326,8 +329,8 @@ class CalculadoraCientifica extends CalculadoraMilan {
     masMenos() {
         var result = eval(-eval(this.operacion));
         document.getElementsByTagName("input")[0].value = result;
-        this.operacion = result+"";
-        this.pantalla = result+"";
+        this.operacion = result + "";
+        this.pantalla = result + "";
     }
 
     parentesisAbrir() {

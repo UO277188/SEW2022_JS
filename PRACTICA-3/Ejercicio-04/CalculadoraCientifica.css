@@ -79,7 +79,7 @@ input[type="text"] {
     cursor: default;
 }
 
-input[type="button"][value="F-E"]{
+input[type="button"][value="F-E"] {
     grid-column: span 3;
-    width: 31.2%;
+    width: 30%;
 }
