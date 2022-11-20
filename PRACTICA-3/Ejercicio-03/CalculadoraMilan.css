@@ -16,7 +16,6 @@ body {
 /* Especificidad 001 */
 main {
     background-color: rgb(38, 38, 94);
-    color: white;
     padding: 0.8em;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
@@ -69,6 +68,7 @@ input[type="button"][value="+"] {
 
 /* Especificidad 001 */
 label {
+    color: white;
     grid-column: span 5;
     font-size: 2em;
 }
