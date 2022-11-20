@@ -64,12 +64,12 @@ class CalculadoraRPN {
 
             else if (event.key == ".")
                 this.punto();
-            else if (event.key == 'C')
+            else if (event.key == 'b')
                 this.borrar();
 
             // tecla enter
             else if (event.key == 'Enter')
-                this.igual();
+                this.enter();
             // tecla retroceso
             else if (event.key == 'Backspace')
                 this.retroceso();
