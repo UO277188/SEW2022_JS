@@ -1,0 +1,2 @@
+
+var calc = new CalculadoraEspecializada();

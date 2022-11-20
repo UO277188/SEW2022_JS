@@ -8,7 +8,7 @@ body {
     height: 100vh;
 }
 
-/* Especificidad 001, hereda la propiedad color de body */
+/* Especificidad 001 */
 main {
     background-color: rgb(164, 164, 164);
     padding: 0.8em;
