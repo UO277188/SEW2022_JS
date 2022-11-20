@@ -28,13 +28,13 @@ class CalculadoraMilan {
             else if (event.key == 'Enter')
                 this.igual();
             // tecla retroceso
-            else if (event.key == 'Backspace')
+            else if (event.key == 'C')
                 this.borrar();
             else if (event.key == "p")
                 this.porcentaje();
             else if (event.key == "r")
                 this.raiz();
-            else if (event.key == "s")
+            else if (event.key == ",")
                 this.masMenos();
 
         })

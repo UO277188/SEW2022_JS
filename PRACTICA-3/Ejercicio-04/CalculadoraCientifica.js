@@ -7,21 +7,8 @@ class CalculadoraCientifica extends CalculadoraMilan {
         this.grados = true;
 
         document.addEventListener('keydown', (event) => {
-            var digitos = new RegExp('^[0-9]+$');
-            if (digitos.test(event.key)) {
-                this.digitos(Number(event.key));
-            } else if (event.key == "+") {
-                this.suma();
-            } else if (event.key == "-") {
-                this.resta();
-            } else if (event.key == "*") {
-                this.multiplicacion();
-            } else if (event.key == "/") {
-                this.division();
-            } else if (event.key == "%") {
+            if (event.key == "%") {
                 this.modulo();
-            } else if (event.key == "r") {
-                this.raiz();
             } else if (event.key == "e") {
                 this.exp();
             } else if (event.key == "s") {
@@ -38,14 +25,10 @@ class CalculadoraCientifica extends CalculadoraMilan {
                 this.cuadrado();
             } else if (event.key == "p") {
                 this.diezElevadoA();
-            } else if (event.key == ".") {
-                this.punto();
             } else if (event.key == "p") {
                 this.pi();
             } else if (event.key == "f") {
                 this.factorial();
-            } else if (event.key == ",") {
-                this.masMenos();
             } else if (event.key == "\(") {
                 this.parentesisAbrir();
             } else if (event.key == "\)") {
@@ -61,26 +44,14 @@ class CalculadoraCientifica extends CalculadoraMilan {
                 this.inversas();
 
                 // memoria
-            } else if (event.key == "m") {
-                this.mrc();
-            } else if (event.key == "g") {
+            } else if (event.key == "v") {
                 this.ms();
-            } else if (event.key == "b") {
+            } else if (event.key == "V") {
                 this.mc();
-            } else if (event.key == "n") {
-                this.mMas();
-            } else if (event.key == "b") {
-                this.mMenos();
 
-                // tecla enter
-            } else if (event.key == 'Enter') {
-                this.igual();
                 // tecla retroceso
             } else if (event.key == 'Backspace') {
                 this.retroceso();
-                // tecla suprimir
-            } else if (event.key == 'C') {
-                this.borrar();
             }
         })
     }
