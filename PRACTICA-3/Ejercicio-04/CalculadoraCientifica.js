@@ -7,52 +7,52 @@ class CalculadoraCientifica extends CalculadoraMilan {
         this.grados = true;
 
         document.addEventListener('keydown', (event) => {
-            if (event.key == "%") {
+            if (event.key == "%")
                 this.modulo();
-            } else if (event.key == "e") {
+            else if (event.key == "e")
                 this.exp();
-            } else if (event.key == "s") {
+            else if (event.key == "s")
                 this.sin();
-            } else if (event.key == "c") {
+            else if (event.key == "c")
                 this.cos();
-            } else if (event.key == "t") {
+            else if (event.key == "t")
                 this.tan();
-            } else if (event.key == "^") {
+            else if (event.key == "^")
                 this.elevar();
-            } else if (event.key == "l") {
+            else if (event.key == "l")
                 this.log();
-            } else if (event.key == "\"") {
+            else if (event.key == "\"")
                 this.cuadrado();
-            } else if (event.key == "p") {
+            else if (event.key == "E")
                 this.diezElevadoA();
-            } else if (event.key == "p") {
+            else if (event.key == "P")
                 this.pi();
-            } else if (event.key == "f") {
+            else if (event.key == "f")
                 this.factorial();
-            } else if (event.key == "\(") {
+            else if (event.key == "\(")
                 this.parentesisAbrir();
-            } else if (event.key == "\)") {
+            else if (event.key == "\)")
                 this.parentesisCerrar();
 
-            } else if (event.key == "d") {
+            else if (event.key == "d")
                 this.deg();
-            } else if (event.key == "h") {
+            else if (event.key == "h")
                 this.hyp();
-            } else if (event.key == "F") {
+            else if (event.key == "F")
                 this.fe();
-            } else if (event.key == "i") {
+            else if (event.key == "i")
                 this.inversas();
 
-                // memoria
-            } else if (event.key == "v") {
+            // memoria
+            else if (event.key == "v")
                 this.ms();
-            } else if (event.key == "V") {
+            else if (event.key == "V")
                 this.mc();
 
-                // tecla retroceso
-            } else if (event.key == 'Backspace') {
+            // tecla retroceso
+            else if (event.key == 'Backspace')
                 this.retroceso();
-            }
+
         })
     }
 
