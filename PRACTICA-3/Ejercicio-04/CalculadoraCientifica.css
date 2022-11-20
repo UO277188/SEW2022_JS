@@ -11,7 +11,6 @@ body {
 /* Especificidad 001 */
 main {
     background-color: rgb(164, 164, 164);
-    color: white;
     padding: 0.8em;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
