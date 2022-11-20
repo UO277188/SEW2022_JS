@@ -68,7 +68,6 @@ textarea {
     overflow: scroll;
     resize: none;
     text-align: right;
-    color: rgb(0, 0, 0);
     cursor: default;
     font-size: 1em;
 }
