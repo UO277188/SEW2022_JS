@@ -1,8 +1,12 @@
-var asignatura = new Object();
-asignatura.nombre = "Software y estándares en la Web";
-asignatura.titulacion = "Grado en Ingeniería Informática del Software";
-asignatura.centro = "Escuela de Ingeniería Informática";
-asignatura.universidad = "Universidad de Oviedo";
-asignatura.curso = "2022-2023";
-asignatura.alumno = "Diego Villa García";
-asignatura.email = "uo277188@uniovi.es";
+"use strict"
+class Asignatura {
+    nombre = "Software y estándares en la Web";
+    titulacion = "Grado en Ingeniería Informática del Software";
+    centro = "Escuela de Ingeniería Informática";
+    universidad = "Universidad de Oviedo";
+    curso = "2022-2023";
+    alumno = "Diego Villa García";
+    email = "uo277188@uniovi.es";
+}
+
+var asignatura = new Asignatura();

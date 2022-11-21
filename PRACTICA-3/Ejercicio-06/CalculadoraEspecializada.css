@@ -8,7 +8,7 @@ body {
     height: 100vh;
 }
 
-/* Especificidad 001 */
+/* Especificidad 001, hereda la propiedad color de body */
 main {
     background-color: rgb(164, 164, 164);
     padding: 0.8em;
@@ -83,11 +83,11 @@ input[type="text"] {
 input[type="button"][value="Gas"],
 input[type="button"][value="Solar"],
 input[type="button"][value="Eólica"],
-input[type="button"][value="Nuclear"]{
+input[type="button"][value="Nuclear"] {
     background-color: rgb(255, 222, 147);
 }
 
-input[type="button"][value="Coste mensual energía dispositivo + IVA"]{
+input[type="button"][value="Coste mensual energía dispositivo + IVA"] {
     background-color: rgb(255, 222, 147);
     grid-column: span 4;
 }

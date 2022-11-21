@@ -1,8 +1,11 @@
-infoNavegador = new Object();
-infoNavegador.nombre = navigator.appName;
-infoNavegador.idioma = navigator.language;
-infoNavegador.version = navigator.appVersion;
-infoNavegador.plataforma = navigator.platform;
-infoNavegador.vendedor = navigator.vendor;
-infoNavegador.agente = navigator.userAgent;
-infoNavegador.javaActivo = navigator.javaEnabled();Idioma
+class InfoNavegador {
+    nombre = navigator.appName;
+    idioma = navigator.language;
+    version = navigator.appVersion;
+    plataforma = navigator.platform;
+    vendedor = navigator.vendor;
+    agente = navigator.userAgent;
+    javaActivo = navigator.javaEnabled();
+}
+
+var infoNavegador = new InfoNavegador();
