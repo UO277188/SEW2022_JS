@@ -31,6 +31,7 @@ class Pila {
     }
 }
 
+"use strict"
 class CalculadoraRPN {
     constructor() {
         this.pila = new Pila();

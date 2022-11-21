@@ -1,3 +1,4 @@
+"use strict"
 class CalculadoraMilan {
     constructor() {
         this.operacion = "";

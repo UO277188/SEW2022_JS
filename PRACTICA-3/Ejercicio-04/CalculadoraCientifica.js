@@ -1,3 +1,4 @@
+"use strict"
 class CalculadoraCientifica extends CalculadoraMilan {
     constructor() {
         super();

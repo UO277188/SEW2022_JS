@@ -27,3 +27,16 @@ primera desapilada es operando 2, no 1, 1 es el segundo desapilado
 RPN ESPECIALIZADA
 añadir txt con explicacion de los metodos nuevos
 4 o 5 funciones
+
+
+-------------------------------------------------------------------------------------
+
+JQUERY
+los style que aparecen en html los genera jquery no pasa nada por tenerlos, el html estático si que no puede tenerlos
+al validar tener cuidado con codigo que genera elementos dentro de otros porque puede dar errores de validacion
+tambien errores al poner texto dentro de elementos que no deberian tener (como table o listas)
+
+EJ METEOROLOGIA
+al utilizar el xml para los lugares coger directamente los nombres de los sitios y pegarlos en el javascript, 
+no hay que buscarlos programando nada en javascript
+tiene que aparecer el icono con el tiempo (la nube, sol...)
