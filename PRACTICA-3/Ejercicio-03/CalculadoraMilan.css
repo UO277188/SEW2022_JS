@@ -27,7 +27,7 @@ main {
 input {
     border: 0.1em solid #111;
     padding: 0.5em;
-    border-radius: 5px;
+    border-radius: 0.5em;
     font-size: 1.5em;
     cursor: pointer;
 }
@@ -80,6 +80,4 @@ input[type="text"] {
     background-color: rgb(203, 255, 202);
     color: rgb(0, 0, 0);
     cursor: default;
-    width: 100%;
-    box-sizing: border-box;
 }

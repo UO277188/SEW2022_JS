@@ -22,7 +22,7 @@ main {
 input {
     border: 0.1em solid #111;
     padding: 0.5em;
-    border-radius: 5px;
+    border-radius: 0.5em;
     font-size: 1.5em;
     cursor: pointer;
 }

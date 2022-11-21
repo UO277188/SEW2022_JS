@@ -242,7 +242,7 @@ class CalculadoraRPN {
         this.digito = "";
         var textArea = document.getElementsByTagName("textarea")[0];
         textArea.innerHTML = this.pila.mostrar();
-        document.getElementsByTagName("input")[0].value = "";
+        document.getElementsByTagName("input")[0].value = this.digito;
         textArea.scrollTop = textArea.scrollHeight;
     }
 }
