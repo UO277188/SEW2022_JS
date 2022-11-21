@@ -63,7 +63,7 @@ input[type="button"][value="="] {
 
 /* Especificidad 021 */
 input[type="button"][value="+"] {
-    grid-row: span 2
+    grid-row: span 2;
 }
 
 /* Especificidad 001, hereda la propiedad background-color de main */
@@ -80,4 +80,6 @@ input[type="text"] {
     background-color: rgb(203, 255, 202);
     color: rgb(0, 0, 0);
     cursor: default;
+    width: 100%;
+    box-sizing: border-box;
 }
