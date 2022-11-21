@@ -152,7 +152,7 @@ class CalculadoraRPN {
             return;
         try {
             var num = Number(this.pila.desapilar());
-            this.pila.apilar(Math.sin(num).toFixed(3));
+            this.pila.apilar(Math.sin(num));
             this.digito = "";
             document.getElementsByTagName("textarea")[0].innerHTML = this.pila.mostrar();
         } catch (error) {
@@ -165,7 +165,7 @@ class CalculadoraRPN {
             return;
         try {
             var num = Number(this.pila.desapilar());
-            this.pila.apilar(Math.cos(num).toFixed(3));
+            this.pila.apilar(Math.cos(num));
             this.digito = "";
             document.getElementsByTagName("textarea")[0].innerHTML = this.pila.mostrar();
         } catch (error) {
@@ -178,7 +178,7 @@ class CalculadoraRPN {
             return;
         try {
             var num = Number(this.pila.desapilar());
-            this.pila.apilar(Math.tan(num).toFixed(3));
+            this.pila.apilar(Math.tan(num));
             this.digito = "";
             document.getElementsByTagName("textarea")[0].innerHTML = this.pila.mostrar();
         } catch (error) {
@@ -191,7 +191,7 @@ class CalculadoraRPN {
             return;
         try {
             var num = Number(this.pila.desapilar());
-            this.pila.apilar(Math.asin(num).toFixed(3));
+            this.pila.apilar(Math.asin(num));
             this.digito = "";
             document.getElementsByTagName("textarea")[0].innerHTML = this.pila.mostrar();
         } catch (error) {
@@ -204,7 +204,7 @@ class CalculadoraRPN {
             return;
         try {
             var num = Number(this.pila.desapilar());
-            this.pila.apilar(Math.acos(num).toFixed(3));
+            this.pila.apilar(Math.acos(num));
             this.digito = "";
             document.getElementsByTagName("textarea")[0].innerHTML = this.pila.mostrar();
         } catch (error) {
@@ -217,7 +217,7 @@ class CalculadoraRPN {
             return;
         try {
             var num = Number(this.pila.desapilar());
-            this.pila.apilar(Math.atan(num).toFixed(3));
+            this.pila.apilar(Math.atan(num));
             this.digito = "";
             document.getElementsByTagName("textarea")[0].innerHTML = this.pila.mostrar();
         } catch (error) {

@@ -33,11 +33,18 @@ class CalculadoraEspecializada extends CalculadoraRPN {
             else if(energia == "nuclear")
                 precioEnergia = Number(0.04);
 
-            var total = dias * horas * precioEnergia;
+            if(precioEnergia == 0)
+                this.borrar();
+            else {
+                var total = dias * horas * precioEnergia;
 
-            this.pila.apilar(Number(total + total * iva/100));
-            this.digito = "";
-            document.getElementsByTagName("textarea")[0].innerHTML = this.pila.mostrar();
+                this.pila.apilar(Number(total + total * iva/100));
+                this.digito = "";
+                document.getElementsByTagName("textarea")[0].innerHTML = this.pila.mostrar();
+                document.getElementsByTagName("input")[0].value = "";
+            }
+
+            
         } catch (error) {
             this.borrar();
         }
