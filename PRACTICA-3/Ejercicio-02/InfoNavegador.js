@@ -1,3 +1,4 @@
+"use strict"
 class InfoNavegador {
     nombre = navigator.appName;
     idioma = navigator.language;
