@@ -38,7 +38,7 @@ class CalculadoraRPN {
         this.digito = "";
 
         document.addEventListener('keydown', (event) => {
-            var digitos = new RegExp('^[0-9]+$');
+            var digitos = new RegExp('[0-9]');
             if (digitos.test(event.key))
                 this.digitos(event.key);
             else if (event.key == "+")

@@ -38,7 +38,7 @@ class CalculadoraRPN {
         this.digito = "";
 
         document.addEventListener('keydown', (event) => {
-            var digitos = new RegExp('^[0-9]+$');
+            var digitos = new RegExp('[0-9]');
             if (digitos.test(event.key))
                 this.digitos(event.key);
             else if (event.key == "+")
@@ -242,7 +242,7 @@ class CalculadoraRPN {
         this.digito = "";
         var textArea = document.getElementsByTagName("textarea")[0];
         textArea.innerHTML = this.pila.mostrar();
-        document.getElementsByTagName("input")[0].value = this.digito;
+        document.getElementsByTagName("input")[0].value = "";
         textArea.scrollTop = textArea.scrollHeight;
     }
 }
