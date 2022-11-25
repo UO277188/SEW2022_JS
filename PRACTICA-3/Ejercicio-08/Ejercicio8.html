@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html lang="es">
+
+<head>
+    <!-- Datos que describen el documento -->
+    <meta charset="UTF-8" />
+
+    <!--Metadatos de los documentos HTML5-->
+    <meta name="author" content="Diego Villa García" />
+    <meta name="description" content="Ejercicio 8 de JavaScript: Consumo de servicios web en JSON" />
+    <meta name="keywords" content="ejercicio, javascript, consumo de servicios web, json" />
+
+    <!--Definición de la ventana gráfica-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Ejercicio 8 de JavaScript: Consumo de servicios web en JSON</title>
+    <script src="https://code.jquery.com/jquery-3.6.1.js"
+        integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="Ejercicio8.css" />
+    <script src="Ejercicio8.js"></script>
+</head>
+
+<body>
+    <main>
+        <h1>Datos meteorológicos</h1>
+
+        <input type="button" value="Mostrar datos de Oviedo" onclick="programa.mostrarDatos('Oviedo')">
+        <input type="button" value="Mostrar datos de Gijón" onclick="programa.mostrarDatos('Gijón')">
+        <input type="button" value="Mostrar datos de Avilés" onclick="programa.mostrarDatos('Avilés')">
+        <input type="button" value="Mostrar datos de Navia" onclick="programa.mostrarDatos('Navia')">
+        <input type="button" value="Mostrar datos de Mieres" onclick="programa.mostrarDatos('Mieres')">
+    </main>
+</body>
+
+</html>
