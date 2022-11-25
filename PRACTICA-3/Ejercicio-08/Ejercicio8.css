@@ -21,7 +21,7 @@ input {
     max-height: 3em;
 }
 
-/* Especificidades 001, 001, 001
+/* Especificidades 001, 001
     Heredan la propiedad color del elemento body */
 h1,
 h2 {

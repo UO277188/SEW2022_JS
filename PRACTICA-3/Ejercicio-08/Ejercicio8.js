@@ -18,7 +18,7 @@ class Programa {
                 datosString += "<li>Temperatura: " + datos.main.temp + " grados Celsius</li>";
                 datosString += "<li>Temperatura máxima: " + datos.main.temp_max + " grados Celsius</li>";
                 datosString += "<li>Temperatura mínima: " + datos.main.temp_min + " grados Celsius</li>";
-                datosString += "<li>Presión: " + datos.main.pressure + " milímetros</li>";
+                datosString += "<li>Presión: " + datos.main.pressure + " hPa</li>";
                 datosString += "<li>Humedad: " + datos.main.humidity + "%</li>";
                 datosString += "<li>Amanece a las: " + new Date(datos.sys.sunrise * 1000).toLocaleTimeString() + "</li>";
                 datosString += "<li>Oscurece a las: " + new Date(datos.sys.sunset * 1000).toLocaleTimeString() + "</li>";
