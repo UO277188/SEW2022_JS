@@ -19,6 +19,7 @@ input {
     font-size: 1.1em;
     cursor: pointer;
     max-height: 3em;
+    margin: 1em
 }
 
 /* Especificidades 001, 001
