@@ -5,6 +5,7 @@ Descripción de los estilos
 
 /* Especificidad 001 */
 body {
+    display: flex;
     color: black;
     background-color: white;
     font-size: 1.1em;

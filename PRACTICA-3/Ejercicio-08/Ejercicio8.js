@@ -27,7 +27,7 @@ class Programa {
                 datosString += "<li>Hora de la medida: " + new Date(datos.dt * 1000).toLocaleTimeString() + "</li>";
                 datosString += "<li>Fecha de la medida: " + new Date(datos.dt * 1000).toLocaleDateString() + "</li>";
                 datosString += "<li>Descripción: " + datos.weather[0].description + "</li>";
-                datosString += "<li>Icono <img src=https://openweathermap.org/img/w/" + datos.weather[0].icon + ".png /></li>";
+                datosString += "<li>Icono <img src=https://openweathermap.org/img/w/" + datos.weather[0].icon + ".png alt='icono del tiempo'/></li>";
                 datosString += "<li>Visibilidad: " + datos.visibility + " metros</li>";
                 datosString += "<li>Nubosidad: " + datos.clouds.all + " %</li></ul>";
 
