@@ -33,11 +33,11 @@ class CalculadoraEspecializada extends CalculadoraRPN {
         try {
             var precioEnergia = this.pila.desapilar();
             var iva = Number(this.pila.desapilar());
-            var consumoKW = Number(this.pila.desapilar());
+            var potenciaKW = Number(this.pila.desapilar());
             var horas = Number(this.pila.desapilar());
             var dias = Number(this.pila.desapilar());
 
-            var total = dias * horas * consumoKW * precioEnergia;
+            var total = dias * horas * potenciaKW * precioEnergia;
 
             this.pila.apilar(Number(total + total * iva / 100));
             this.digito = "";

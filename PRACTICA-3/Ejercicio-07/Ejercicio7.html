@@ -1,0 +1,67 @@
+<!DOCTYPE HTML>
+<html lang="es">
+
+<head>
+    <!-- Datos que describen el documento -->
+    <meta charset="UTF-8" />
+
+    <!--Metadatos de los documentos HTML5-->
+    <meta name="author" content="Diego Villa García" />
+    <meta name="description" content="Ejercicio 7 de JavaScript: Introducción a JQuery" />
+    <meta name="keywords" content="ejercicio, javascript, jquery" />
+
+    <!--Definición de la ventana gráfica-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Ejercicio 7 de JavaScript: Introducción a JQuery</title>
+    <script src="https://code.jquery.com/jquery-3.6.1.js"
+        integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="Ejercicio7.css" />
+    <script src="Ejercicio7.js"></script>
+    <script src="CalculadoraEspecializada.js"></script>
+</head>
+
+<body>
+    <main>
+        <h1>Elemento h1</h1>
+        <p>Párrafo del elemento h1</p>
+
+        <h2>Elemento h2</h2>
+        <p>Párrafo del elemento h2</p>
+
+        <h3>Elemento h3</h3>
+        <p>Párrafo del elemento h3</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Campo</th>
+                    <th>Valor</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Campo 1</td>
+                    <td>Valor del campo 1</td>
+                </tr>
+                <tr>
+                    <td>Campo 2</td>
+                    <td>Valor del campo 2</td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+
+    <aside>
+        <h2>Botonera</h2>
+        <input type="button" value="Mostrar párrafos" onclick="programa.mostrarParrafos()">
+        <input type="button" value="Ocultar párrafos" onclick="programa.ocultarParrafos()">
+        <input type="button" value="Modificar párrafos" onclick="programa.modificarParrafos()">
+        <input type="button" value="Añadir elementos" onclick="programa.añadirElementosH2()">
+        <input type="button" value="Eliminar elementos" onclick="programa.eliminarElementosH2()">
+        <input type="button" value="Recorrer árbol DOM" onclick="programa.recorrerDOM()">
+        <input type="button" value="Sumar filas y columnas de la tabla" onclick="programa.sumarFilasColumnas()">
+    </aside>
+</body>
+
+</html>

@@ -1,0 +1,68 @@
+/*****************************
+Diego Villa García - UO277188
+Descripción de los estilos
+******************************/
+
+/* Especificidad 001 */
+body {
+    color: black;
+    background-color: white;
+    font-size: 1.1em;
+    font-family: Helvetica, Verdana, sans-serif;
+    display: grid;
+    grid-template-areas: "main aside"
+        "main aside"
+        "main aside";
+    gap: 0.5em;
+    padding: 0.2em;
+}
+
+/* Especificidad 001 */
+main {
+    grid-area: main;
+    margin-right: 2em;
+}
+
+/* Especificidad 001 */
+aside {
+    grid-area: aside;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1em;
+}
+
+/* Especificidad 001 */
+input {
+    border: 0.1em solid #111;
+    border-radius: 0.5em;
+    font-size: 1.1em;
+    cursor: pointer;
+    max-height: 3em;
+}
+
+aside h2 {
+    grid-column: span 4;
+}
+
+/* Especificidades 001, 001, 001
+    Heredan la propiedad color del elemento body */
+h1,
+h2,
+h3 {
+    background-color: #ffcc85;
+    border-radius: 0.2em;
+    padding: 0.2em;
+}
+
+/* Especificidad 001 */
+table {
+    border: 0.15em;
+    border-color: black;
+    border-style: solid;
+}
+
+/* Especificidad 001
+    Hereda la propiedad color del elemento body */
+thead {
+    background-color: #ffcc85;
+}
