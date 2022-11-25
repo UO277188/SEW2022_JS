@@ -47,7 +47,7 @@ class Programa {
             filas++;
         });
 
-        $("table").before("La tabla tiene " + filas + " filas y " + columnas + " columnas");
+        $("table").before("<p>La tabla tiene " + filas + " filas y " + columnas + " columnas" + "</p>");
     }
 }
 
