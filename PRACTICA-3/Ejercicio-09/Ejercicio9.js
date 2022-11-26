@@ -47,9 +47,7 @@ class Programa {
                 datosString += "<li>Descripción: " + $('weather', datos).attr("value") + "</li>";
                 datosString += "<li>Icono <img src=https://openweathermap.org/img/w/" + $('weather', datos).attr("icon") + ".png alt='icono del tiempo'/></li>";
                 datosString += "<li>Visibilidad: " + $('visibility', datos).attr("value") + " metros</li>";
-                datosString += "<li>Nubosidad: " + $('clouds', datos).attr("value") + " %</li>";
-                datosString += "<li>Precipitación: " + $('precipitation', datos).attr("value") +
-                    $('precipitation', datos).attr("mdoe") + " %</li></ul>";
+                datosString += "<li>Nubosidad: " + $('clouds', datos).attr("value") + " %</li></ul>";
 
                 $("h2:contains(" + $('city', datos).attr("name") + ")").after(datosString);
             },
