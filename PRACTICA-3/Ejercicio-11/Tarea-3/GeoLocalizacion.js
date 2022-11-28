@@ -57,7 +57,7 @@ class GeoLocalización {
             + this.longitud + "," + this.latitud + ",13,0,0/600x600?access_token=" + apiKey;
 
         var ubicacion = document.getElementsByTagName("section")[0];
-        ubicacion.innerHTML = "<img src=" + this.url + " alt='mapa estático mapbox'/>"
+        ubicacion.innerHTML = "<h2>Mapa estático</h2> <img src=" + this.url + " alt='mapa estático mapbox'/>"
     }
 }
 
