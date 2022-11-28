@@ -7,6 +7,7 @@ class Programa {
 
     obtenerPrecio() {
         this.configurarURL();
+        this.cargarDatos();
     }
 
     configurarURL() {
@@ -28,7 +29,17 @@ class Programa {
             url: this.url,
             method: 'GET',
             success: function (datos) {
+                let onzas = $("input[type='number']").val();
+                let precio = onzas / datos.rates.XAG;
 
+                let parrafoPrecio = $('h2').next('p');
+                if(parrafoPrecio.length==0) {
+                    var elemento = document.createElement('p');
+                    elemento.innerHTML = precio;
+                    $('h2').after(elemento);
+                }else {
+                    parrafoPrecio.html(precio);
+                }
             },
             error: function () {
                 $("p").text("Error al obtener los datos");

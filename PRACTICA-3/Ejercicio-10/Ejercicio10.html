@@ -25,19 +25,21 @@
         <h1>Precio del oro</h1>
         <p>Selecciona la fecha a consultar (por defecto es hoy), la divisa y el peso en onzas.</p>
 
-        <label for="fechaPrecio">Fecha</label>
-        <input type="date" value="fechaPrecio" step="1" min="2000-01-01"><br>
+        <label>Fecha<input type="date" value="fechaPrecio" step="1" min="2000-01-01"></label>
+        
+        <label>Divisa
+            <select name="moneda">
+                <option value="EUR">Euros € (EUR)</option>
+                <option value="USD">Dólares estadounidenses $ (USD)</option>
+            </select>
+        </label>
 
-        <label for="moneda">Divisa</label>
-        <select name="moneda">
-            <option value="EUR">Euros € (EUR)</option>
-            <option value="USD">Dólares estadounidenses $ (USD)</option>
-        </select>
-
-        <label for="onzas">Peso del oro en onzas</label>
-        <input type="number" value="onzas" min=0 step=0.01><br>
-
+        <label>Peso del oro en onzas<input type="number" value="onzas" min=0 step=0.01></label>
+        
         <input type="button" value="Obtener precio" onclick="programa.obtenerPrecio()">
+
+        <h2>Precio:</h2>
+        
     </main>
 </body>
 
