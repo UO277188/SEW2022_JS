@@ -1,3 +1,4 @@
+"use strict"
 class Programa {
     constructor() {
         this.apikey = "bf1a7b5c5136c085c015a1ed1f2ba907";

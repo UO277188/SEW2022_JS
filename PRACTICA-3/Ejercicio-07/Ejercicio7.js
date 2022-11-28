@@ -1,3 +1,4 @@
+"use strict"
 class Programa {
     constructor() {
         this.recorrido = false;
