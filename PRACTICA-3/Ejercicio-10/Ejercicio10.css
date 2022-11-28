@@ -5,7 +5,6 @@ Descripción de los estilos
 
 /* Especificidad 001 */
 body {
-    display: flex;
     color: black;
     background-color: white;
     font-size: 1.1em;
@@ -13,13 +12,13 @@ body {
 }
 
 /* Especificidad 001 */
-input {
+input,
+select {
     border: 0.1em solid #111;
-    border-radius: 0.5em;
     font-size: 1.1em;
     cursor: pointer;
-    max-height: 3em;
-    margin: 1em
+    margin: 1em;
+    display: flex;
 }
 
 /* Especificidades 001, 001
