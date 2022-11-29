@@ -63,6 +63,9 @@ class GeoLocalización {
     getMapaDinamicoMapBox() {
         let apiKey = "pk.eyJ1IjoidW8yNzcxODgiLCJhIjoiY2xiMHUzbjI4MDBhMTN4b2puYTR1dXlxNSJ9.6-0ol9W73UtV6B8K6gS9Ew";
 
+        var ubicacion = document.getElementsByTagName("section")[0];
+        ubicacion.innerHTML = "<h2>Mapa</h2>";
+
         mapboxgl.accessToken = apiKey;
         const map = new mapboxgl.Map({
             container: 'map',

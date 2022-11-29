@@ -66,9 +66,8 @@ class GeoLocalización {
         let longitudAleatoria = this.coordenadaAleatoria();
         let latitudAleatoria = this.coordenadaAleatoria();
 
-
         var ubicacion = document.getElementsByTagName("section")[0];
-        ubicacion.innerHTML = "";
+        ubicacion.innerHTML = "<h2>Mapa</h2>";
 
         mapboxgl.accessToken = apiKey;
         const map = new mapboxgl.Map({
