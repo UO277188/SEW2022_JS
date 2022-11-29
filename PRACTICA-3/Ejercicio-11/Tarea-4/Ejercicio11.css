@@ -30,3 +30,9 @@ h2 {
     border-radius: 0.2em;
     padding: 0.2em;
 }
+
+/* Especificidad 001 */
+section {
+    min-height: 60vh;
+    min-width: 90vw;
+}

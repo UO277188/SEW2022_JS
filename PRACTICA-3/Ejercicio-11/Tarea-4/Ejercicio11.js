@@ -59,6 +59,25 @@ class GeoLocalización {
         var ubicacion = document.getElementsByTagName("section")[0];
         ubicacion.innerHTML = "<h2>Mapa estático</h2> <img src=" + this.url + " alt='mapa estático mapbox'/>"
     }
+
+    getMapaDinamicoMapBox() {
+        let apiKey = "pk.eyJ1IjoidW8yNzcxODgiLCJhIjoiY2xiMHUzbjI4MDBhMTN4b2puYTR1dXlxNSJ9.6-0ol9W73UtV6B8K6gS9Ew";
+
+        mapboxgl.accessToken = apiKey;
+        const map = new mapboxgl.Map({
+            container: 'map',
+            style: 'mapbox://styles/mapbox/streets-v11',
+            center: [this.longitud, this.latitud],
+            zoom: 9
+        });
+
+        const marker = new mapboxgl.Marker()
+            .setLngLat([this.longitud, this.latitud])
+            .addTo(map);
+        const marker1 = new mapboxgl.Marker()
+            .setLngLat([12.554729, 55.70651])
+            .addTo(map);
+    }
 }
 
 var geolocalizacion = new GeoLocalización();
