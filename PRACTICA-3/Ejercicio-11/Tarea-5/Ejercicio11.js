@@ -67,12 +67,12 @@ class GeoLocalización {
         const map = new mapboxgl.Map({
             container: 'map',
             style: 'mapbox://styles/mapbox/streets-v11',
-            center: [-5.851298, 43.354826],
+            center: [this.longitud, this.latitud],
             zoom: 9
         });
 
         const marker = new mapboxgl.Marker()
-            .setLngLat([-5.851298, 43.354826])
+            .setLngLat([this.longitud, this.latitud])
             .addTo(map);
     }
 }
