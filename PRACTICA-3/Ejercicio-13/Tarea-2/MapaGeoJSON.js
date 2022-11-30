@@ -21,13 +21,15 @@ class MapaKML {
     añadirMarcadores(map) {
         var lector = new FileReader();
         lector.onload = function (evento) {
-            $($.parseXML(lector.result)).find('Placemark').each(function () {
-                let coordenadas = $(this).find('coordinates').text().split(",");
+            let archivo = $.parseJSON(lector.result);
+            for (let i = 0; i < archivo.features.length; i++) {
+                let longitud = archivo.features[i].geometry.coordinates[0];
+                let latitud = archivo.features[i].geometry.coordinates[1];
                 const marker = new mapboxgl.Marker()
-                    .setLngLat([coordenadas[0], coordenadas[1]])
-                    .setPopup(new mapboxgl.Popup().setHTML("<p>" + $(this).find('name').text() + "</p>"))
+                    .setLngLat([longitud, latitud])
+                    .setPopup(new mapboxgl.Popup().setHTML("<p>" + archivo.features[i].properties.description + "</p>"))
                     .addTo(map);
-            });
+            };
         }
         lector.readAsText(document.getElementsByTagName("input")[0].files[0]);
 
