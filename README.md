@@ -20,5 +20,7 @@ Ejercicio 11<br />
 &emsp;Tarea 5 - https://uo277188.github.io/SEW2022_JS/PRACTICA-3/Ejercicio-11/Tarea-5/Ejercicio11.html<br />
 &emsp;Tarea 6 - https://uo277188.github.io/SEW2022_JS/PRACTICA-3/Ejercicio-11/Tarea-6/Ejercicio11.html<br />
 Ejercicio 12 - https://uo277188.github.io/SEW2022_JS/PRACTICA-3/Ejercicio-12/Ejercicio12.html<br />
-Ejercicio 13 - https://uo277188.github.io/SEW2022_JS/PRACTICA-3/Ejercicio-13/Ejercicio13.html<br />
+Ejercicio 13<br />
+&emsp;Tarea 1 - https://uo277188.github.io/SEW2022_JS/PRACTICA-3/Ejercicio-13/Tarea-1/MapaKML.html<br />
+&emsp;Tarea 2 - https://uo277188.github.io/SEW2022_JS/PRACTICA-3/Ejercicio-13/Tarea-2/MapaGeoJSON.html<br />
 Ejercicio 13 - https://uo277188.github.io/SEW2022_JS/PRACTICA-3/Ejercicio-14/Ejercicio14.html<br />
