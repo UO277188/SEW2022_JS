@@ -1,0 +1,396 @@
+{
+    "type": "FeatureCollection",
+    "name": "Ejercicio13",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "Name": "Oviedo",
+                "description": "Diego Villa García (nacimiento)"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -5.845053,
+                    43.360422,
+                    242
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "Name": "La Corredoria",
+                "description": "Diego Villa García (residencia)"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -5.823475,
+                    43.387149,
+                    166
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "Name": "Gijón",
+                "description": "Eduardo Martínez Suárez (nacimiento)"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -5.66275,
+                    43.544942,
+                    0
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "Name": "Langreo",
+                "description": "Eduardo Martínez Suárez (residencia)"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -5.683431,
+                    43.295013,
+                    280
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "Name": "Santander",
+                "description": "Martín Suárez Gómez (nacimiento)"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -3.809972,
+                    43.462041,
+                    23
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "Name": "Ribadesella",
+                "description": "Martín Suárez Gómez (residencia)"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -5.058748,
+                    43.461713,
+                    0
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "Name": "León",
+                "description": "Marta Pérez Pérez (nacimiento)"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -5.57096,
+                    42.597825,
+                    837
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "Name": "Cangas de Onís",
+                "description": "Marta Pérez Pérez (residencia)"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -5.06585,
+                    43.313614,
+                    424
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "Name": "Mieres",
+                "description": "Edgar López Gómez (nacimiento)"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -5.772247,
+                    43.248816,
+                    386
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "Name": "Navia",
+                "description": "Edgar López Gómez (residencia)"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -6.72337,
+                    43.539111,
+                    55
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "Name": "Avilés",
+                "description": "Laura Menéndez Díaz (nacimiento)"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -5.922247,
+                    43.555444,
+                    27
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "Name": "Lugones",
+                "description": "Laura Menéndez Díaz (residencia)"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -5.810479,
+                    43.402768,
+                    166
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "Name": "Pola de Lena",
+                "description": "Mireia García Rodríguez (nacimiento)"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -5.828135,
+                    43.161569,
+                    502
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "Name": "Tabladiello",
+                "description": "Mireia García Rodríguez (residencia)"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -5.606987,
+                    43.393217,
+                    270
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "Name": "Cangas de Narcea",
+                "description": "Lara Díaz García (nacimiento)"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -6.506993,
+                    43.238485,
+                    523
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "Name": "Viella",
+                "description": "Lara Díaz García (residencia)"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -5.784678,
+                    43.399113,
+                    179
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "Name": "Lugo",
+                "description": "Enrique Riesgo García (nacimiento)"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -7.473992,
+                    43.046225,
+                    525
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "Name": "Ourense",
+                "description": "Enrique Riesgo García (residencia)"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -7.61141,
+                    42.196846,
+                    609
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "Name": "Tineo",
+                "description": "Javier Soldado Gómez (nacimiento)"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -6.491952,
+                    43.309275,
+                    557
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "Name": "Ribadeo",
+                "description": "Javier Soldado Gómez (residencia)"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -7.0436775,
+                    43.5361589,
+                    68
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "Name": "La Coruña",
+                "description": "Manuel Beltrán Díaz (nacimiento)"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -8.3959425,
+                    43.3709703,
+                    16
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "Name": "San Sebastián",
+                "description": "Manuel Beltrán Díaz (residencia)"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -1.9838889,
+                    43.3224219,
+                    25
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "Name": "Salamanca",
+                "description": "Sara Suárez Cabal (nacimiento)"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -5.6640182,
+                    40.9651572,
+                    820
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "Name": "Burgos",
+                "description": "Sara Suárez Cabal (residencia)"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -3.696977,
+                    42.343926,
+                    873
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "Name": "Zamora",
+                "description": "Martina Gómez García (nacimiento)"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -5.744328378518475,
+                    41.50429182277301,
+                    641
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "Name": "Vigo",
+                "description": "Martina Gómez García (residencia)"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -8.7247205,
+                    42.2376602,
+                    22
+                ]
+            }
+        }
+    ]
+}
