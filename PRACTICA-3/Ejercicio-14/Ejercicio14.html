@@ -21,26 +21,24 @@
 </head>
 
 <body onload="app.cargar()">
-    <header>
-        <main>
-            <h1>Aplicación de dibujo</h1>
-            <header>
-                <h2>Herramientas</h2>
-                <label for="archivo">Abrir imagen</label>
-                <input id="archivo" type="file" onchange="app.cargarImagen(event)">
-                <input value="Negro" type="button" onclick="app.color('black')">
-                <input value="Rojo" type="button" onclick="app.color('red')">
-                <input value="Azul" type="button" onclick="app.color('blue')">
-                <input value="Verde" type="button" onclick="app.color('green')">
-                <input value="Pantalla completa" type="button" onclick="app.pantallaCompleta()">
-            </header>
-            <section>
-                <h2>Dibujo</h2>
-                <canvas onmousedown="app.pulsar(event)" onmouseup="app.soltar()" onmousemove="
+    <main>
+        <h1>Aplicación de dibujo</h1>
+        <header>
+            <h2>Herramientas</h2>
+            <label for="archivo">Abrir imagen</label>
+            <input id="archivo" type="file" onchange="app.cargarImagen(event)">
+            <input value="Negro" type="button" onclick="app.color('black')">
+            <input value="Rojo" type="button" onclick="app.color('red')">
+            <input value="Azul" type="button" onclick="app.color('blue')">
+            <input value="Verde" type="button" onclick="app.color('green')">
+            <input value="Pantalla completa" type="button" onclick="app.pantallaCompleta()">
+        </header>
+        <section>
+            <h2>Dibujo</h2>
+            <canvas onmousedown="app.pulsar(event)" onmouseup="app.soltar()" onmousemove="
                     app.mover(event)" width="1200" height="600">Dibujo</canvas>
-            </section>
-        </main>
-    </header>
+        </section>
+    </main>
 </body>
 
 </html>
