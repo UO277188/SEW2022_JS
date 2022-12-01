@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html lang="es">
+
+<head>
+    <!-- Datos que describen el documento -->
+    <meta charset="UTF-8" />
+
+    <!--Metadatos de los documentos HTML5-->
+    <meta name="author" content="Diego Villa García" />
+    <meta name="description" content="Ejercicio 14 de JavaScript: Aplicación de dibujo" />
+    <meta name="keywords" content="ejercicio, javascript, dibujo" />
+
+    <!--Definición de la ventana gráfica-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Ejercicio 14 de JavaScript: Aplicación de dibujo</title>
+    <script src="https://code.jquery.com/jquery-3.6.1.js"
+        integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="Ejercicio14.css" />
+    <script src="Ejercicio14.js"></script>
+</head>
+
+<body onload="app.cargar()">
+    <header>
+        <main>
+            <h1>Aplicación de dibujo</h1>
+            <header>
+                <h2>Herramientas</h2>
+                <label for="archivo">Abrir imagen</label>
+                <input id="archivo" type="file" onchange="app.cargarImagen(event)">
+                <input value="Negro" type="button" onclick="app.color('black')">
+                <input value="Rojo" type="button" onclick="app.color('red')">
+                <input value="Azul" type="button" onclick="app.color('blue')">
+                <input value="Verde" type="button" onclick="app.color('green')">
+                <input value="Pantalla completa" type="button" onclick="app.pantallaCompleta()">
+            </header>
+            <section>
+                <h2>Dibujo</h2>
+                <canvas onmousedown="app.pulsar(event)" onmouseup="app.soltar()" onmousemove="
+                    app.mover(event)" width="1200" height="600">Dibujo</canvas>
+            </section>
+        </main>
+    </header>
+</body>
+
+</html>
