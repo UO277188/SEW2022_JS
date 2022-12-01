@@ -4,16 +4,6 @@ class AplicacionDibujo {
         this.pintar = false;
         this.inicialX = 0;
         this.inicialY = 0;
-
-        document.addEventListener('keydown', (event) => {
-            if (event.key == "d")
-                this.pulsar();
-        });
-
-        document.addEventListener('keyup', (event) => {
-            if (event.key == "d")
-                this.soltar();
-        });
     }
 
     cargar() {
@@ -29,6 +19,11 @@ class AplicacionDibujo {
         this.pintar = true;
         this.inicialX = evento.offsetX;
         this.inicialY = evento.offsetY;
+    }
+
+    pulsarTeclado(evento) {
+        if (evento.key == "d")
+            this.pulsar(evento);
     }
 
     soltar() {
