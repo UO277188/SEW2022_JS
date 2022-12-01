@@ -23,4 +23,4 @@ Ejercicio 12 - https://uo277188.github.io/SEW2022_JS/PRACTICA-3/Ejercicio-12/Eje
 Ejercicio 13<br />
 &emsp;Tarea 1 - https://uo277188.github.io/SEW2022_JS/PRACTICA-3/Ejercicio-13/Tarea-1/MapaKML.html<br />
 &emsp;Tarea 2 - https://uo277188.github.io/SEW2022_JS/PRACTICA-3/Ejercicio-13/Tarea-2/MapaGeoJSON.html<br />
-Ejercicio 13 - https://uo277188.github.io/SEW2022_JS/PRACTICA-3/Ejercicio-14/Ejercicio14.html<br />
+Ejercicio 14 - https://uo277188.github.io/SEW2022_JS/PRACTICA-3/Ejercicio-14/Ejercicio14.html<br />
