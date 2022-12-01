@@ -47,22 +47,26 @@ input:active {
     border: 0.1em solid red;
 }
 
-/* Especificidad 011 */
+/* Especificidad 011
+    Hereda la propiedad color del elemento body */
 input[value="Negro"] {
     background-color: rgb(174, 174, 174);
 }
 
-/* Especificidad 011 */
+/* Especificidad 011
+    Hereda la propiedad color del elemento body */
 input[value="Rojo"] {
     background-color: rgb(255, 192, 192);
 }
 
-/* Especificidad 011 */
+/* Especificidad 011
+    Hereda la propiedad color del elemento body */
 input[value="Azul"] {
     background-color: rgb(197, 200, 255);
 }
 
-/* Especificidad 011 */
+/* Especificidad 011
+    Hereda la propiedad color del elemento body */
 input[value="Verde"] {
     background-color: rgb(164, 255, 171);
 }
