@@ -42,13 +42,6 @@ canvas {
     border: 1px solid black;
 }
 
-/* Especificidad 001 */
-input {
-    border: 0.15em solid #111;
-    border-radius: 0.5em;
-    cursor: pointer;
-}
-
 /* Especificidad 011 */
 input:active {
     border: 0.1em solid red;
