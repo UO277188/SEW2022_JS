@@ -31,7 +31,7 @@ class Programa {
             $("*", document.body).each(function () {
                 var etiquetaPadre = $(this).parent().get(0).tagName;
                 $(this).prepend(document.createTextNode("Elemento padre: <" + etiquetaPadre + "> tipo de elemento: <"
-                    + $(this).get(0).tagName + "> valor: "));
+                    + $(this).get(0).tagName + "> valor:"));
             });
 
             this.recorrido = true;
