@@ -20,7 +20,7 @@
     <script src="Ejercicio14.js"></script>
 </head>
 
-<body onload="app.cargar()" onkeydown="app.pulsarTeclado(event)" onkeyup="app.soltar()">
+<body onload="app.cargar()">
     <main>
         <h1>Aplicación de dibujo</h1>
         <header>
@@ -35,7 +35,8 @@
         </header>
         <section>
             <h2>Dibujo</h2>
-            <canvas onmousedown="app.pulsar(event)" onmouseup="app.soltar()" onmousemove="
+            <canvas onmousedown="app.pulsar(event)" onkeydown="app.pulsarTeclado(event)" onmouseup="app.soltar()"
+                onkeyup="app.soltar()" onmousemove="
                     app.mover(event)" width="1200" height="600">Dibujo</canvas>
         </section>
     </main>

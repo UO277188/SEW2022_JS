@@ -13,6 +13,8 @@ class AplicacionDibujo {
         this.ctx.lineCap = "round";
         this.ctx.strokeStyle = "black";
         this.ctx.lineJoin = "round";
+
+        this.canvas.tabIndex = 1000;    // para poder utilizar eventos onkey en canvas
     }
 
     pulsar(evento) {
