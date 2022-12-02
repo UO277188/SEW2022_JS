@@ -4,6 +4,19 @@ class AplicacionDibujo {
         this.pintar = false;
         this.inicialX = 0;
         this.inicialY = 0;
+
+        document.addEventListener('keydown', (event) => {
+            if (event.key == "n")
+                this.color("black");
+            else if (event.key == "r")
+                this.color("red");
+            else if (event.key == "a")
+                this.color("blue");
+            else if (event.key == "v")
+                this.color("green");
+            else if (event.key == "p")
+                this.pantallaCompleta();
+        });
     }
 
     cargar() {
