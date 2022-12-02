@@ -28,11 +28,11 @@ class Programa {
 
     recorrerDOM() {
         if (this.recorrido == false) {
+            $('table').after('<section><h2>Recorrido</h2></section>');
             $("*", document.body).each(function () {
                 var etiquetaPadre = $(this).parent().get(0).tagName;
-                if ($(this).get(0).tagName != "TABLE" && $(this).get(0).tagName != "THEAD" && $(this).get(0).tagName != "TR" && $(this).get(0).tagName != "TBODY")
-                    $(this).prepend(document.createTextNode("Elemento padre: <" + etiquetaPadre + "> tipo de elemento: <"
-                        + $(this).get(0).tagName + "> valor: "));
+                $("h2:contains('Recorrido')").after('<p>' + "Elemento padre: " + etiquetaPadre + " tipo de elemento: "
+                    + $(this).get(0).tagName + '</p>');
             });
 
             this.recorrido = true;
