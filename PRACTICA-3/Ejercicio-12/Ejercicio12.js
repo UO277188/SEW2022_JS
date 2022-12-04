@@ -13,6 +13,8 @@ class Programa {
             var lector = new FileReader();
             lector.onload = function (evento) {
                 document.getElementsByTagName("pre")[0].innerText = lector.result;
+                var regex = /<br\s*[\/]?>/gi;
+                $("pre").html($("pre").html().replace(regex, "\n"));
             }
             lector.readAsText(archivo);
         } else

@@ -30,3 +30,7 @@ h2 {
     border-radius: 0.2em;
     padding: 0.2em;
 }
+
+pre {
+    display: inline;
+}
