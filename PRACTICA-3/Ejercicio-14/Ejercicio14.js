@@ -28,6 +28,8 @@ class AplicacionDibujo {
         this.ctx.lineJoin = "round";
 
         this.canvas.tabIndex = 1000;    // para poder utilizar eventos onkey en canvas
+        this.canvas.width = document.getElementsByTagName("section")[0].clientWidth;
+        this.canvas.height = document.getElementsByTagName("section")[0].clientHeight;
     }
 
     pulsar(evento) {
@@ -78,8 +80,6 @@ class AplicacionDibujo {
             img.onload = function () {
                 let canvas = document.getElementsByTagName("canvas")[0];
                 let ctx = canvas.getContext("2d");
-                canvas.width = img.width;
-                canvas.height = img.height;
                 ctx.drawImage(img, 0, 0);
             }
             img.src = event.target.result;
